@@ -1,19 +1,12 @@
 import React, {Component} from 'react'
 import Button from '@material-ui/core/Button'
+import NavDrawer from '../components/NavDrawer'
 
 class Template extends Component {
   render() {
     return (
       <div>
-        <header>
-          <h1>TicTacToe</h1>
-          <Button
-            variant="contained"
-            color="primary"
-            onTouchStart={() => console.log('bang')}>
-            Send
-          </Button>
-        </header>
+        <NavDrawer />
         <main>
           {this.props.children}
         </main>
