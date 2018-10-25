@@ -1,15 +1,18 @@
 import React, {Component} from 'react'
-import Button from '@material-ui/core/Button'
 import NavDrawer from '../components/NavDrawer'
+import {Header,Main} from '../styled/Template'
 
 class Template extends Component {
   render() {
     return (
       <div>
         <NavDrawer />
-        <main>
+        <Header>
+          TicTacToe
+        </Header>
+        <Main>
           {this.props.children}
-        </main>
+        </Main>
       </div>
     )
   }

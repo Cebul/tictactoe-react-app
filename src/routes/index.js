@@ -1,19 +1,18 @@
 import React from 'react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Template from '../containers/Template'
-import Home from '../containers/Home'
+import TicTacToe from '../containers/TicTacToe'
 import Profile from '../containers/Profile'
 import NoMatch from '../containers/NoMatch'
 
 const Routes = () => (
-    <Router>
-      <div>
-        <Template />
+  <Router>
+    <Template>
         <Switch>
           <Route
             exact
             path='/'
-            component={Home}
+            component={TicTacToe}
           />
           <Route
             path='/profile'
@@ -21,8 +20,8 @@ const Routes = () => (
           />
           <Route component={NoMatch} />
         </Switch>
-      </div>
-    </Router>
+    </Template>
+  </Router>
 )
 
 export default Routes
